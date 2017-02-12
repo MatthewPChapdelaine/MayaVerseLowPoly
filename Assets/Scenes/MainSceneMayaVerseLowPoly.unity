@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16787003, g: 0.21072215, b: 0.2899319, a: 1}
+  m_IndirectSpecularColor: {r: 0.035550907, g: 0.03817882, b: 0.050378785, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -91,48 +91,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &4782077
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1224663425}
-    m_Modifications:
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.72882235
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.036152173
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.4455559
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &4819452
 Prefab:
   m_ObjectHideFlags: 0
@@ -1847,11 +1805,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7505f79cb619cfd4ebb6af0704ad4260, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &617425035 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462,
-    type: 2}
-  m_PrefabInternal: {fileID: 4782077}
 --- !u!1001 &642776478
 Prefab:
   m_ObjectHideFlags: 0
@@ -3077,7 +3030,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.562
+      value: -0.592
       objectReference: {fileID: 0}
     - target: {fileID: 4000013099078372, guid: 81777fc0886bcb3418871dab46c58462, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3191,7 +3144,6 @@ Transform:
   m_Children:
   - {fileID: 1392893882}
   - {fileID: 1956770342}
-  - {fileID: 617425035}
   - {fileID: 850814528}
   - {fileID: 813887545}
   - {fileID: 648987221}
@@ -4038,6 +3990,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1500815187}
   - component: {fileID: 1500815188}
+  - component: {fileID: 1500815190}
+  - component: {fileID: 1500815189}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4070,6 +4024,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb84c8190e27c641bab7651eb2b9f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1500815189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500815186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f747ccd5ac3cc42a9660aeadd409f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 1623880502639976, guid: 3b07ba11adb9ff743ace51256949112a, type: 2}
+--- !u!114 &1500815190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500815186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af59bf748f2fa8148b2c1c4e63486ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultFileName: Level1.game
+  AutoSave: 0
+  TryToLoadDefaultOnStart: 0
+  OnExitSave: 0
+  Encrypt: 0
+  TimeBetweenSavedSeconds: 300
+  CurrentTimeToSave: 0
+  password: my password
 --- !u!1 &1529754689 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: fdca4283976eadd42b32e09a3de1f455, type: 3}
