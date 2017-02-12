@@ -10,6 +10,7 @@ public class NetworkPlayer : MonoBehaviour {
 
 	Vector3 lastPosition;
 	Quaternion lastRotation;
+	Vector3 lastScale;
 
 	void Start(){
 		//Tell the network to pass data to our RecieveData function so we can process it.
@@ -29,10 +30,14 @@ public class NetworkPlayer : MonoBehaviour {
 			//Then send our rotation with subject 1 if we've rotated.
 			if( transform.rotation != lastRotation )
 				DarkRiftAPI.SendMessageToOthers(TagIndex.PlayerUpdate, TagIndex.PlayerUpdateSubjects.Rotation, transform.rotation);
+			//Then send our localscale
+			if( transform.localScale != lastScale )
+				DarkRiftAPI.SendMessageToOthers(TagIndex.PlayerUpdate, TagIndex.PlayerUpdateSubjects.Scale, transform.localScale);
 
 			//Update stuff
 			lastPosition = transform.position;
 			lastRotation = transform.rotation;
+			lastScale = transform.localScale;
 		}
 	}
 
@@ -60,6 +65,11 @@ public class NetworkPlayer : MonoBehaviour {
 				//...update our rotation
 				if( subject == TagIndex.PlayerUpdateSubjects.Rotation ){
 					transform.rotation = (Quaternion)data;
+				}
+
+				//...update our localScale
+				if( subject == TagIndex.PlayerUpdateSubjects.Scale ){
+					transform.localScale = (Vector3)data;
 				}
 			}
 		}

@@ -10,8 +10,9 @@ public class GameManagerStart : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
+
         //Make game working in background
+        Application.runInBackground = true;
 
         //Load all serializable objects
         SerializableManager.LoadAll();
