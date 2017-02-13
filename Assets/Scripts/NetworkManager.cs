@@ -35,7 +35,7 @@ public class NetworkManager : MonoBehaviour
 			DarkRiftAPI.SendMessageToAll (TagIndex.Controller, TagIndex.ControllerSubjects.SpawnPlayer, new Vector3(0f,0f,0f));
 		}
 		else
-			Debug.Log ("Failed to connect to DarkRift Server!");
+			Debug.LogError ("Failed to connect to DarkRift Server!");
 	}
 
 	void OnApplicationQuit ()
