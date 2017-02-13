@@ -14,13 +14,25 @@ public class GameManagerStart : MonoBehaviour {
         //Make game working in background
         Application.runInBackground = true;
 
-        //Load all serializable objects
-        SerializableManager.LoadAll();
-
-        //Create object
-        //GameObject newObject = SerializableManager.PrefabInstantiate(Prefab);
-        //newObject.transform.position = new Vector3(9.908f, 0.645f, 8.2f);
-
+		if (PlayerPrefsX.GetBool("ManasSpawned",false) == false)
+		{	
+        	//Create object
+        	GameObject newObject = SerializableManager.PrefabInstantiate(Prefab);
+        	newObject.transform.position = new Vector3(9.908f, 0.645f, 8.2f);
+			PlayerPrefsX.SetBool ("ManasSpawned", true);
+		}
+		else
+		{
+			//Load all serializable objects
+			SerializableManager.LoadAll();
+		}
+		/*
+		//Delete objects
+		//to erase those now!
+		foreach (PrefabSaveSerializable Manas in GameObject.FindObjectsOfType<PrefabSaveSerializable>()) {
+			Destroy(Manas.gameObject);
+		}
+		*/
     }
 
     // On quiting Application save all
