@@ -3999,6 +3999,7 @@ GameObject:
   - component: {fileID: 1500815190}
   - component: {fileID: 1500815189}
   - component: {fileID: 1500815191}
+  - component: {fileID: 1500815192}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4075,6 +4076,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverIP: 127.0.0.1
   playerObject: {fileID: 0}
+--- !u!114 &1500815192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500815186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dee0c3df1ea9b4d857659582f2c174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  output: 
+  stack: 
+  maxLines: 30
 --- !u!1 &1529754689 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: fdca4283976eadd42b32e09a3de1f455, type: 3}

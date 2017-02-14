@@ -47,7 +47,8 @@ public class NetworkObject : MonoBehaviour {
 
 			//...update our position and rotation
 			if( subject == TagIndex.ObjectUpdateSubjects.PosRot){
-				DeserialisePosRot (data);
+                Debug.Log("Data recieved!");
+                DeserialisePosRot (data);
 			}
 		}
 	}
