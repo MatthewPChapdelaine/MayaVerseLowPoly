@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16786979, g: 0.21072173, b: 0.2899307, a: 1}
+  m_IndirectSpecularColor: {r: 0.04933828, g: 0.05613506, b: 0.07818847, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3122,7 +3122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -51.6
+      value: -51.3
       objectReference: {fileID: 0}
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3170,11 +3170,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.21323
+      value: 1.150504
       objectReference: {fileID: 0}
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.6145899
+      value: 1.6048757
       objectReference: {fileID: 0}
     - target: {fileID: 11418562, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: _camera
@@ -3183,6 +3183,10 @@ Prefab:
     - target: {fileID: 141350, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_Name
       value: StillWater (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.99398345
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
@@ -3994,6 +3998,7 @@ GameObject:
   - component: {fileID: 1500815188}
   - component: {fileID: 1500815190}
   - component: {fileID: 1500815189}
+  - component: {fileID: 1500815191}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4057,6 +4062,19 @@ MonoBehaviour:
   TimeBetweenSavedSeconds: 300
   CurrentTimeToSave: 0
   password: my password
+--- !u!114 &1500815191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500815186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7968a29dbcd76448ea2b80fbf8ca7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serverIP: 127.0.0.1
+  playerObject: {fileID: 0}
 --- !u!1 &1529754689 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: fdca4283976eadd42b32e09a3de1f455, type: 3}
@@ -4832,7 +4850,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 9.9998
       objectReference: {fileID: 0}
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4888,7 +4906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.2132338
+      value: 1.1698111
       objectReference: {fileID: 0}
     - target: {fileID: 447722, guid: 6cdc63a83cf953c4cb3481a399b11256, type: 2}
       propertyPath: m_LocalScale.z

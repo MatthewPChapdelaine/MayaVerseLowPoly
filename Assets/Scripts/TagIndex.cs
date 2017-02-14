@@ -24,8 +24,9 @@ public class TagIndex {
 	}
 
 	public class ObjectUpdateSubjects{
-		public const int Position = 0;		//Move the player to (Vector3)Data
-		public const int Rotation = 1;		//Rotate the player to (Quaternion)Data
-		public const int Scale = 2;			//Scale the player to (Vector3)Data
+		public const int Position = 0;		//Move the object to (Vector3)Data
+		public const int Rotation = 1;		//Rotate the object to (Quaternion)Data
+		public const int Scale = 2;			//Scale the object to (Vector3)Data
+		public const int PosRot = 4;		//Scale the object to (Vector3)Data/(Quaternion)Data
 	}
 }
