@@ -71,7 +71,8 @@ public class NetworkObject : MonoBehaviour {
 			writer.Write(rot.z);
 
 			DarkRiftAPI.SendMessageToOthers(TagIndex.ObjectUpdate, TagIndex.ObjectUpdateSubjects.PosRot, writer);
-		}
+            Debug.Log("Data sent!");
+        }
 	}
 
 	void DeserialisePosRot(object data)
