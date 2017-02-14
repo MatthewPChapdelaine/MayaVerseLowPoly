@@ -14,7 +14,7 @@ public class NetworkObject : MonoBehaviour {
 
 	void Start(){
 		//Tell the network to pass data to our RecieveData function so we can process it.
-		DarkRiftAPI.onDataDetailed += RecieveData;
+		DarkRiftAPI.onData += RecieveData;
 	}
 
 	void Update(){
@@ -32,7 +32,7 @@ public class NetworkObject : MonoBehaviour {
 		}
 	}
 
-	void RecieveData(ushort senderID, byte tag, ushort subject, object data){
+	void RecieveData(byte tag, ushort subject, object data){
 		//Right then. When data is recieved it will be passed here, 
 		//we then need to process it if it's got a tag of 1 or 2 
 		//(the tags for position and rotation), check it's for us 
@@ -63,7 +63,7 @@ public class NetworkObject : MonoBehaviour {
 			//Next we write any data to the writer
 			writer.Write(pos.x);
 			writer.Write(pos.y);
-			writer.Write(pos.y);
+			writer.Write(pos.z);
 			writer.Write(rot.x);
 			writer.Write(rot.y);
 			writer.Write(rot.w);
