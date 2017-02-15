@@ -13,12 +13,14 @@ public class GameManagerStart : MonoBehaviour {
 
         //Make game working in background
         Application.runInBackground = true;
+		//PlayerPrefsX.SetBool ("ManasSpawned", false); //DEBUG
 
 		if (PlayerPrefsX.GetBool("ManasSpawned",false) == false)
 		{	
         	//Create object
         	GameObject newObject = SerializableManager.PrefabInstantiate(Prefab);
-        	newObject.transform.position = new Vector3(9.908f, 0.645f, 8.2f);
+        	//newObject.transform.position = new Vector3(9.908f, 0.645f, 8.2f);
+			newObject.transform.position = new Vector3(0, 0, 0);
 			PlayerPrefsX.SetBool ("ManasSpawned", true);
 		}
 		else

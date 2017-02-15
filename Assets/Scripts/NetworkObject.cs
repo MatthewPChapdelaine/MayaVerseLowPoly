@@ -7,6 +7,7 @@ public class NetworkObject : MonoBehaviour {
 
 	//The ID of the client that owns this player (so we can check if it's us updating)
 	public ushort objectID;
+	public bool DEBUG = true;
 
 	Vector3 lastPosition;
 	Quaternion lastRotation;
@@ -70,7 +71,9 @@ public class NetworkObject : MonoBehaviour {
 			writer.Write(rot.z);
 
 			DarkRiftAPI.SendMessageToOthers(TagIndex.ObjectUpdate, TagIndex.ObjectUpdateSubjects.PosRot, writer);
-			Debug.Log("Data sent: "+pos.ToString("F4")+" "+rot.ToString("F6"));
+			if (DEBUG) {
+				Debug.Log ("Data sent: " + pos.ToString ("F4") + " " + rot.ToString ("F6"));
+			}
         }
 	}
 
@@ -98,7 +101,9 @@ public class NetworkObject : MonoBehaviour {
 					reader.ReadSingle(),
 					reader.ReadSingle()
 				);
-				Debug.Log("Data recieved:"+transform.position.ToString("F4")+" "+transform.rotation.ToString("F6"));
+				if (DEBUG) {
+					Debug.Log ("Data recieved:" + transform.position.ToString ("F4") + " " + transform.rotation.ToString ("F6"));
+				}
 			}
 		}
 		else
