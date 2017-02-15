@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.03589203, g: 0.038612, b: 0.05104971, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4089,7 +4089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   output: 
   stack: 
-  maxLines: 30
+  maxLines: 60
 --- !u!1 &1529754689 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: fdca4283976eadd42b32e09a3de1f455, type: 3}

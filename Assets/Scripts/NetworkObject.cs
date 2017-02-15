@@ -47,7 +47,6 @@ public class NetworkObject : MonoBehaviour {
 
 			//...update our position and rotation
 			if( subject == TagIndex.ObjectUpdateSubjects.PosRot){
-                Debug.Log("Data recieved!");
                 DeserialisePosRot (data);
 			}
 		}
@@ -71,7 +70,7 @@ public class NetworkObject : MonoBehaviour {
 			writer.Write(rot.z);
 
 			DarkRiftAPI.SendMessageToOthers(TagIndex.ObjectUpdate, TagIndex.ObjectUpdateSubjects.PosRot, writer);
-            Debug.Log("Data sent!");
+			Debug.Log("Data sent: "+pos.ToString("F4")+" "+rot.ToString("F6"));
         }
 	}
 
@@ -99,6 +98,7 @@ public class NetworkObject : MonoBehaviour {
 					reader.ReadSingle(),
 					reader.ReadSingle()
 				);
+				Debug.Log("Data recieved:"+transform.position.ToString("F4")+" "+transform.rotation.ToString("F6"));
 			}
 		}
 		else

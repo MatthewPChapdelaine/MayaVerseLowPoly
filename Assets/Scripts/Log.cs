@@ -9,7 +9,7 @@ public class Log : MonoBehaviour
     public string stack = "";
     private bool hidden = true;
     private Vector2 scrollPos;
-    public int maxLines = 30;
+    public int maxLines = 60;
 
     void OnEnable()
     {
