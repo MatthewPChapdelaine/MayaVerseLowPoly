@@ -15,6 +15,13 @@ public class GameManagerStart : MonoBehaviour {
         Application.runInBackground = true;
 		//PlayerPrefsX.SetBool ("ManasSpawned", false); //DEBUG
 
+		INIParser ini = new INIParser();
+		// Open the save file. If the save file does not exist, INIParser automatically create
+		// one
+		ini.Open(Application.persistentDataPath + "MayaVerseLowPoly.ini");
+		//Close file
+		ini.Close();
+
 		if (PlayerPrefsX.GetBool("ManasSpawned",false) == false)
 		{	
         	//Create object

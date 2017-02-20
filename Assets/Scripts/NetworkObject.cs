@@ -23,7 +23,7 @@ public class NetworkObject : MonoBehaviour {
 		if( DarkRiftAPI.isConnected ){
 			//We're going to use a tag of 1 for movement messages
 			//If we're conencted and have moved send our position with subject 0.
-			if(( transform.position != lastPosition ) || ( transform.rotation != lastRotation ))
+			if((  Vector3.Distance(lastPosition, transform.position) > 0.05f ) || ( transform.rotation != lastRotation ))
 			{
 				SerialisePosRot(transform.position, transform.rotation);
 			}
