@@ -28,6 +28,8 @@ public class GameManagerStart : MonoBehaviour {
         	GameObject newObject = SerializableManager.PrefabInstantiate(Prefab);
         	//newObject.transform.position = new Vector3(9.908f, 0.645f, 8.2f);
 			newObject.transform.position = new Vector3(0, 0, 0);
+			//Assign identifier
+			newObject.GetComponent<NetworkObject> ().objectID = 0;
 			PlayerPrefsX.SetBool ("ManasSpawned", true);
 		}
 		else
