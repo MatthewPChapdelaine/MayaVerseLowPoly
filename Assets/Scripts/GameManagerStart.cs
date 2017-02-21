@@ -18,7 +18,7 @@ public class GameManagerStart : MonoBehaviour {
 		INIParser ini = new INIParser();
 		// Open the save file. If the save file does not exist, INIParser automatically create
 		// one
-		ini.Open(Application.persistentDataPath + "MayaVerseLowPoly.ini");
+		ini.Open(Application.dataPath + "MayaVerseLowPoly.ini");
 		//Close file
 		ini.Close();
 

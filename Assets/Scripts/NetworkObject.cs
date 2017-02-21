@@ -62,6 +62,7 @@ public class NetworkObject : MonoBehaviour {
 		using(DarkRiftWriter writer = new DarkRiftWriter())
 		{
 			//Next we write any data to the writer
+			writer.Write(objectID);
 			writer.Write(pos.x);
 			writer.Write(pos.y);
 			writer.Write(pos.z);
@@ -89,6 +90,8 @@ public class NetworkObject : MonoBehaviour {
 			using(DarkRiftReader reader = (DarkRiftReader)data)
 			{
 				//Then read!
+				//Read the ObjectID
+
 				transform.position = new Vector3(
 					reader.ReadSingle(),
 					reader.ReadSingle(),
