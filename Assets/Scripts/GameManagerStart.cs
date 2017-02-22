@@ -19,8 +19,7 @@ public class GameManagerStart : MonoBehaviour {
 		// Open the save file. If the save file does not exist, INIParser automatically create
 		// one
 		ini.Open(Application.dataPath + "/MayaVerseLowPoly.ini");
-		//Close file
-		ini.Close();
+
 
 		if (PlayerPrefsX.GetBool("ManasSpawned",false) == false)
 		{	
@@ -37,6 +36,7 @@ public class GameManagerStart : MonoBehaviour {
 			//Load all serializable objects
 			SerializableManager.LoadAll();
 		}
+
 		/*
 		//Delete objects
 		//to erase those now!
@@ -44,6 +44,9 @@ public class GameManagerStart : MonoBehaviour {
 			Destroy(Manas.gameObject);
 		}
 		*/
+
+		//Close file
+		ini.Close();0000
     }
 
     // On quiting Application save all
@@ -53,7 +56,8 @@ public class GameManagerStart : MonoBehaviour {
         //Save all serializable objects	
         SerializableManager.SaveAll();
     }
-    void OnDestroy()
+    
+	void OnDestroy()
     {
         if (quitting)
         {
