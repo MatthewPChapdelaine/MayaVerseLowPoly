@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 using DarkRift;
 
 public class NetworkObject : MonoBehaviour {
@@ -91,21 +91,34 @@ public class NetworkObject : MonoBehaviour {
 			{
 				//Then read!
 				//Read the ObjectID
+				ushort id = reader.ReadUInt16();
 
-				transform.position = new Vector3(
-					reader.ReadSingle(),
-					reader.ReadSingle(),
-					reader.ReadSingle()
-				);
+				//The upate is for this object
+				if (id == objectID) {
+				
+					try
+					{
+						transform.position = new Vector3 (
+							reader.ReadSingle (),
+							reader.ReadSingle (),
+							reader.ReadSingle ()
+						);
 
-				transform.rotation = new Quaternion(
-					reader.ReadSingle(),
-					reader.ReadSingle(),
-					reader.ReadSingle(),
-					reader.ReadSingle()
-				);
-				if (DEBUG) {
-					Debug.Log ("Data recieved:" + transform.position.ToString ("F4") + " " + transform.rotation.ToString ("F6"));
+						transform.rotation = new Quaternion (
+							reader.ReadSingle (),
+							reader.ReadSingle (),
+							reader.ReadSingle (),
+							reader.ReadSingle ()
+						);
+						
+						if (DEBUG) {
+							Debug.Log ("Data recieved:" + transform.position.ToString ("F4") + " " + transform.rotation.ToString ("F6"));
+						}
+					}
+					catch (KeyNotFoundException)
+					{
+						//Probably not aware of them yet!
+					}
 				}
 			}
 		}
