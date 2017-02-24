@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using LitJson;
 using System.IO;
-using UnityEditor;
+using UnityEditor; //This using doesn't works well!
 
 public class ipfsJson : MonoBehaviour {
 

@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23564629871553136}
   - component: {fileID: 64769556552682898}
   - component: {fileID: 54906521431335420}
-  - component: {fileID: 64936570418946328}
   - component: {fileID: 114847058689100706}
   - component: {fileID: 114349574901079766}
   - component: {fileID: 114172141943442772}
@@ -119,20 +118,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2488558a42929f84d96e4866d6b62af9, type: 3}
---- !u!64 &64936570418946328
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1623880502639976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 2488558a42929f84d96e4866d6b62af9, type: 3}
 --- !u!114 &114172141943442772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 0
+  DEBUG: 1
 --- !u!114 &114349574901079766
 MonoBehaviour:
   m_ObjectHideFlags: 1
