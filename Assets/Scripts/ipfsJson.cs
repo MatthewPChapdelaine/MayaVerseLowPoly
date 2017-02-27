@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using LitJson;
 using System.IO;
-using UnityEditor;
+//using UnityEditor;
 
 public class ipfsJson : MonoBehaviour {
 
@@ -60,7 +60,7 @@ public class ipfsJson : MonoBehaviour {
             //GameObject.Instantiate(testModel, new Vector3(0, 0, 0), Quaternion.identity);
 
             //Questo dovrebbe ricaricare, ma non lo fa. Il file viene salvato, ma non appare. Solo dopo refresh appare :-( e quindi credo sia caricabile.
-            AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
+            //AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
 
             Object prefab = Resources.Load("duck"); // Assets/Resources/Prefabs/prefab1.FBX
             GameObject t = (GameObject)Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);

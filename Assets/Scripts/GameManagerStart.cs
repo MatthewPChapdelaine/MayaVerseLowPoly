@@ -46,7 +46,7 @@ public class GameManagerStart : MonoBehaviour {
 		*/
 
 		//Close file
-		ini.Close();0000
+		ini.Close();
     }
 
     // On quiting Application save all

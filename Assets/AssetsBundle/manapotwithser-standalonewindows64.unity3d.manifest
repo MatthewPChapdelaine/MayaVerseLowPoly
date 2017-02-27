@@ -1,0 +1,46 @@
+ManifestFileVersion: 0
+CRC: 1352324172
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 86a71f07e0cf6bd751f827df59e2c428
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8812127658f2330e7d18db8e8e4e9f67
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5867874794a124d538e1d129c636f9c9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d2257c3a3294d61438fd55f4f6a79e58, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eb09858b792e4c247b13652a16f933bd, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/ManaPotWithSer.prefab
+Dependencies: []
