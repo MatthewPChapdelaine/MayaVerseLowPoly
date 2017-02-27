@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using LitJson;
 using System.IO;
+<<<<<<< HEAD
 //using UnityEditor;
+=======
+using UnityEditor; //This using doesn't works well!
+>>>>>>> origin/master
 
 public class ipfsJson : MonoBehaviour {
 
