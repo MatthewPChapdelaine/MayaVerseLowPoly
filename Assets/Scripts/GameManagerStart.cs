@@ -20,8 +20,7 @@ public class GameManagerStart : MonoBehaviour {
 		// one
 		ini.Open(Application.dataPath + "/MayaVerseLowPoly.ini");
 
-
-		if (PlayerPrefsX.GetBool("ManasSpawned",false) == false)
+		if (ini.ReadValue("ObjectSpawned","Spawned",false) == false)
 		{	
         	//Create object
         	GameObject newObject = SerializableManager.PrefabInstantiate(Prefab);
@@ -29,7 +28,7 @@ public class GameManagerStart : MonoBehaviour {
 			newObject.transform.position = new Vector3(0, 0, 0);
 			//Assign identifier
 			newObject.GetComponent<NetworkObject> ().objectID = 0;
-			PlayerPrefsX.SetBool ("ManasSpawned", true);
+			ini.WriteValue ("ObjectSpawned", "Spawned", true);
 		}
 		else
 		{
