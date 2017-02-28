@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - con_03
+  - con_01
+  - con_02
+  - con_04
+  - Message
+  - GameManagerStart
   layers:
   - Default
   - TransparentFX

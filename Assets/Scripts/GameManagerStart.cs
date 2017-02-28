@@ -20,6 +20,7 @@ public class GameManagerStart : MonoBehaviour {
 		// one
 		ini.Open(Application.dataPath + "/MayaVerseLowPoly.ini");
 
+		//Check all objects spawned
 		if (ini.ReadValue("ObjectSpawned","Spawned",false) == false)
 		{	
         	//Create object
@@ -34,6 +35,15 @@ public class GameManagerStart : MonoBehaviour {
 		{
 			//Load all serializable objects
 			SerializableManager.LoadAll();
+		}
+
+		//Check GUI Debug Log 
+		if (ini.ReadValue ("DebugLog", "GUIDebug", false) == false) {
+			GetComponent<Log> ().enabled = false;
+			//ini.WriteValue ("DebugLog", "GUIDebug", true);
+		} else {
+			GetComponent<Log> ().enabled = true;
+			//ini.WriteValue ("DebugLog", "GUIDebug", false);
 		}
 
 		/*
